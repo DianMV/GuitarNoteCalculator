@@ -9,7 +9,7 @@ end
 
 string=0
 until string>0 && string<=6
-puts "Which string are is that on? (write a number from 1 to 6)"
+puts "Which string is that on? (write a number from 1 to 6)"
 string=gets.chomp.to_i
 end
 
