@@ -44,6 +44,9 @@ if wished_string<string
     distance={6=>5, 5=> 5, 4=>5, 3=>4, 2=>5, 1=>5}
     result_fret-= distance[i]
     end
+    if result_fret<0
+     result_fret= -result_fret
+    end
     puts "The note (#{notes[result_fret]}) you're looking for is on the #{result_fret} fret"
 end
 
