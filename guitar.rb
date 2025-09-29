@@ -45,7 +45,7 @@ if wished_string<string
     result_fret-= distance[i]
     end
     if result_fret<0
-     result_fret= -result_fret
+     result_fret= 12+result_fret
     end
     puts "The note (#{notes[result_fret]}) you're looking for is on the #{result_fret} fret"
 end
