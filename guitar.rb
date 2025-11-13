@@ -1,3 +1,4 @@
+loop do
 fret_nr=-1
 until fret_nr>=0 && fret_nr<=24
     puts "What fret are you on? (Write the number, from 0 to 24)"
@@ -57,6 +58,22 @@ if wished_string>string
     end
     puts "The note (#{notes[result_fret%12]}) you're looking for is on the #{result_fret%12} fret"
 end
+    loop do
+        puts "//////////////////////"
+        puts " Do you want to exit?"
+        puts " (yes)"
+        puts "  (no)"
+        puts "//////////////////////"
+        answer=gets.chomp.downcase
 
-
-
+        if answer=="yes"
+            puts "exiting..."
+            exit
+        elsif answer=="no"
+            break
+        else
+            puts "invalid answer, try again"
+            next 
+        end
+    end
+end
