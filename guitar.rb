@@ -42,18 +42,20 @@ end
 
 if wished_string<string
     (wished_string...string).each do |i|
-    distance={6=>5, 5=> 5, 4=>5, 3=>4, 2=>5, 1=>5}
+    distance={6=>5, 5=>5, 4=>5, 3=>5, 2=>4, 1=>0}
     result_fret-= distance[i]
     end
     if result_fret<0
-     result_fret= 12+result_fret
+      until result_fret >= 0
+        result_fret += 12
+      end
     end
-    puts "The note (#{notes[result_fret]}) you're looking for is on the #{result_fret} fret"
+    puts "The note (#{notes[result_fret%12]}) you're looking for is on the #{result_fret%12} fret"
 end
 
 if wished_string>string
     (string...wished_string).each do |i|
-    distance={6=>5, 5=> 5, 4=>5, 3=>4, 2=>5, 1=>5}
+    distance={6=>5, 5=>5, 4=>5, 3=>5, 2=>4, 1=>0}
     result_fret+= distance[i]
     end
     puts "The note (#{notes[result_fret%12]}) you're looking for is on the #{result_fret%12} fret"
